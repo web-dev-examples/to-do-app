@@ -7,7 +7,7 @@
 Simple static Progressive Web Application
 
 
-## [![Byte size of To Do App][badge__main__to_do_app__source_code]][to_do_app__main__source_code] [![Open Issues][badge__issues__to_do_app]][issues__to_do_app] [![Open Pull Requests][badge__pull_requests__to_do_app]][pull_requests__to_do_app] [![Latest commits][badge__commits__to_do_app__main]][commits__to_do_app__main] [![to-do-app Demos][badge__gh_pages__to_do_app]][gh_pages__to_do_app]
+## [![Byte size of To Do App][badge__gh_pages__to_do_app__source_code]][to_do_app__gh_pages__source_code] [![Open Issues][badge__issues__to_do_app]][issues__to_do_app] [![Open Pull Requests][badge__pull_requests__to_do_app]][pull_requests__to_do_app] [![Latest commits][badge__commits__to_do_app__gh_pages]][commits__to_do_app__gh_pages] [![to-do-app Demos][badge__gh_pages__to_do_app]][gh_pages__to_do_app]
 
 
 ---
@@ -170,11 +170,11 @@ git commit -F- <<'EOF'
 EOF
 
 
-git push fork main
+git push fork gh-pages
 ```
 
 
-> Note, the `-u` option may be used to set `fork` as the default remote, eg. _`git push -u fork main`_ however, this will also default the `fork` remote for pulling from too! Meaning that pulling updates from `origin` must be done explicitly, eg. _`git pull origin main`_
+> Note, the `-u` option may be used to set `fork` as the default remote, eg. _`git push -u fork gh-pages`_ however, this will also default the `fork` remote for pulling from too! Meaning that pulling updates from `origin` must be done explicitly, eg. _`git pull origin gh-pages`_
 
 
 - Then on GitHub submit a Pull Request through the Web-UI, the URL syntax is _`https://github.com/<NAME>/<REPO>/pull/new/<BRANCH>`_
@@ -269,11 +269,11 @@ For further details review full length version of [AGPL-3.0][branch__current__li
   "&#x2696; Full length version of AGPL-3.0 License"
 
 
-[badge__commits__to_do_app__main]:
-  https://img.shields.io/github/last-commit/web-dev-examples/to-do-app/main.svg
+[badge__commits__to_do_app__gh_pages]:
+  https://img.shields.io/github/last-commit/web-dev-examples/to-do-app/gh-pages.svg
 
-[commits__to_do_app__main]:
-  https://github.com/web-dev-examples/to-do-app/commits/main
+[commits__to_do_app__gh_pages]:
+  https://github.com/web-dev-examples/to-do-app/commits/gh-pages
   "&#x1F4DD; History of changes on this branch"
 
 
@@ -304,7 +304,7 @@ For further details review full length version of [AGPL-3.0][branch__current__li
   https://github.com/web-dev-examples/to-do-app/pulls
   "&#x1F3D7; Pull Request friendly, though please check the Community guidelines"
 
-[to_do_app__main__source_code]:
+[to_do_app__gh_pages__source_code]:
   https://github.com/web-dev-examples/to-do-app/
   "&#x2328; Project source!"
 
@@ -314,7 +314,7 @@ For further details review full length version of [AGPL-3.0][branch__current__li
 [badge__pull_requests__to_do_app]:
   https://img.shields.io/github/issues-pr/web-dev-examples/to-do-app.svg
 
-[badge__main__to_do_app__source_code]:
+[badge__gh_pages__to_do_app__source_code]:
   https://img.shields.io/github/repo-size/web-dev-examples/to-do-app
 
 
