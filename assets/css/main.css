@@ -238,7 +238,7 @@ h3.todo_list__item__summary {
   border-width: 0.35em;
   padding: 0.15em 0.5em;
   margin: 0.25em;
-  user-selet: none;
+  user-select: none;
   -moz-user-select: none;
 }
 
