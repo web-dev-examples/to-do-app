@@ -1,0 +1,275 @@
+
+/**
+ * CSS Lobotomized Owl hack
+ */
+* + * {
+  margin-top: 1.5em;
+}
+
+:root,
+*,
+*::after,
+*::before {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* ========================================================================= */
+
+
+html {
+  height: 100%;
+}
+
+body {
+  margin-top: 0;
+  margin-bottom: 0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+}
+
+main {
+  flex-grow: 1;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+footer {
+  margin-bottom: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  padding-bottom: 2.5em;
+  border-top-color: black;
+  border-top-style: groove;
+}
+
+
+/* ========================================================================= */
+
+
+#todo_collections {
+  position: unset;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  display: unset;
+  visibility: visible;
+}
+
+#todo_collections:empty {
+  position: fixed;
+  opacity: 0;
+  filter: alpha(opacity=0); /* Old Microsoft opacity */
+  display: none;
+  visibility: hidden;
+}
+
+#todo_collections__example {
+  position: fixed;
+  opacity: 0;
+  filter: alpha(opacity=0); /* Old Microsoft opacity */
+  display: none;
+  visibility: hidden;
+}
+
+#todo_collections:empty + #todo_collections__example {
+  position: unset;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  display: unset;
+  visibility: visible;
+}
+
+
+/* ========================================================================= */
+
+
+.todo_list,
+.todo_list__container {
+  list-style-type: none;
+  padding-left: unset;
+}
+
+.todo_list__summary {
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+.todo_list__inputs__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo_list__inputs {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.todo_list__button {
+  flex-grow: 0.05;
+  padding: 0.25em;
+  margin: 0.5em 0;
+}
+
+.todo_list__item__inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.todo_list__item__button__delete {
+  padding: 0.25em;
+  margin: 0.5em;
+}
+
+
+/* ========================================================================= */
+
+
+.todo_list__label {
+  position: absolute;
+  top: 0;
+  left: 0.5em;
+  transition: 0.2s;
+}
+
+.todo_list__input,
+.todo_list__textarea {
+  width: 100%;
+  margin-top: 0.75em;
+  padding-top: 0.5em;
+}
+
+
+.todo_list__input {
+  padding-bottom: 1.25em;
+}
+
+.todo_list__input:focus,
+.todo_list__input:valid {
+  padding-top: 1.25em;
+  padding-bottom: 0.5em;
+}
+
+
+.todo_list__textarea {
+  padding-bottom: 2.5em;
+}
+
+.todo_list__textarea:focus,
+.todo_list__textarea:valid {
+  padding-top: 2.5em;
+  padding-bottom: 0.5em;
+}
+
+
+.todo_list__input:focus + .todo_list__label,
+.todo_list__input:valid + .todo_list__label,
+.todo_list__textarea:focus + .todo_list__label,
+.todo_list__textarea:valid + .todo_list__label {
+  font-size: 0.75em;
+}
+
+
+/* ========================================================================= */
+
+
+/**
+  * Note, for accessibility neither of the following may be used
+  * display: none;
+  * visibility: hidden;
+  */
+.todo_list__item__checkbox {
+  position: fixed;
+  opacity: 0;
+  filter: alpha(opacity=0); /* Old Microsoft opacity */
+}
+
+
+.todo_list__item__container {
+  display: flex;
+  flex-direction: column;
+  background-color: #BBE3D6;
+  padding: 0 0.5em;
+}
+
+.todo_list__item__checkbox:checked + .todo_list__item__container {
+  background-color: #E3BBCF;
+}
+
+
+.todo_list__item__summary {
+  font-size: 1.25em;
+  font-weight: bolder;
+  margin-top: 0.5em;
+}
+
+h3.todo_list__item__summary {
+  margin-left: 1.2em;
+  margin-bottom: 0;
+}
+
+.todo_list__item__checkbox:checked + .todo_list__item__container .todo_list__item__summary {
+  text-decoration: line-through;
+}
+
+
+.todo_list__item__label {
+  background-color: lightgray;
+  font-size: 1.5em;
+  border-radius: 0.5em;
+  border-style: groove;
+  border-width: 0.35em;
+  padding: 0.15em 0.5em;
+  margin: 0.25em;
+  user-selet: none;
+  -moz-user-select: none;
+}
+
+.todo_list__item__label::after {
+  content: '?';
+  user-selet: none;
+}
+
+.todo_list__item__checkbox:checked + .todo_list__item__container .todo_list__item__label::after {
+  content: '!';
+}
+
+
+/* ========================================================================= */
+
+
+@media only screen and (min-width: 960px) {
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .todo_list__container {
+    margin-right: 3em;
+    width: 80%;
+  }
+
+  aside {
+    margin-right: 3em;
+    margin-left: 3em;
+    width: 20%;
+  }
+}
+

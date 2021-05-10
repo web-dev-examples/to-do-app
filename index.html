@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>To-Do App</title>
+    <script type="text/javascript" src="assets/js/main.js" differ></script>
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/app/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
+    <link rel="mask-icon" href="assets/images/app/icons/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="manifest" href="site.webmanifest" crossorigin="use-credentials" />
+  </head>
+
+
+  <body>
+    <header>
+      <h1>To-Do</h1>
+    </header>
+
+
+    <main id="main_app">
+      <noscript>
+        <p>
+          <b>Notice</b> this web-site requires JavaScript and <code>localStorage</code> to function.
+        </p>
+      </noscript>
+
+      <ul class="todo_list__container" id="todo_collections"></ul>
+
+      <!-- Example is hidden via CSS when above element is not empty -->
+      <ul class="todo_list__container" id="todo_collections__example">
+        <li data-uuid="todo_list__example-uuid-string-list">
+          <details open>
+            <summary class="todo_list__summary" id="template__summary">Example List</summary>
+
+            <div class="todo_list__inputs__container">
+              <div class="todo_list__inputs">
+                <input class="todo_list__input" type="text" readonly />
+                <label class="todo_list__label">Name</label>
+              </div>
+
+              <div class="todo_list__inputs">
+                <textarea class="todo_list__textarea" name="" cols="80" rows="5" required readonly></textarea>
+                <label class="todo_list__label">Description</label>
+              </div>
+
+              <div class="todo_list__inputs">
+                <button class="todo_list__button">Delete List</button>
+                <button class="todo_list__button">Add Item</button>
+              </div>
+            </div>
+
+            <ul class="todo_list">
+              <li class="todo_list__item" data-uuid="list_item__example-uuid-string-item-two">
+                <input id="todo__example__input__not_done" type="checkbox" class="todo_list__item__checkbox" />
+                <div class="todo_list__item__container">
+                  <details class="todo_list__item__details" open>
+                    <summary class="todo_list__item__summary">Example To-Do Item Two</summary>
+                    <p>Description of another thing to do</p>
+                  </details>
+
+                  <div class="todo_list__item__inputs">
+                    <button class="todo_list__item__button__delete">Delete</button>
+                    <label for="todo__example__input__not_done" class="todo_list__item__label">Finished</label>
+                  </div>
+                </div>
+              </li>
+
+              <li class="todo_list__item" data-uuid="list_item__example-uuid-string-item-one">
+                <input id="todo__example__input__done" type="checkbox" class="todo_list__item__checkbox" checked />
+                <div class="todo_list__item__container">
+                  <h3 class="todo_list__item__summary">Example To-Do Item One</h3>
+
+                  <div class="todo_list__item__inputs">
+                    <button class="todo_list__item__button__delete">Delete</button>
+                    <label for="todo__example__input__done" class="todo_list__item__label">Finished</label>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+
+      <hr>
+      <aside class="todo_list__inputs__container">
+        <div class="todo_list__inputs">
+          <input class="todo_list__input"
+                 id="todo__text__new_list"
+                 type="text"
+                 required
+          />
+
+          <label class="todo_list__label"
+                 for="todo__text__new_list"
+                 id="todo__label__new_list"
+          >New List Name</label>
+        </div>
+
+        <button class="todo_list__button"
+                id="todo__button__new_list"
+        >Add New List</button>
+
+        <blockquote>
+          <p>
+            This static web-app is built with CSS, HTML, and vanilla JavaScript.
+            Or in other words no server-side scripting or database required!
+          </p>
+
+          <p>
+            Source code is available at
+            <a href="https://github.com/web-dev-examples/to-do-app">
+              <span>GitHub</span>
+              <span>--</span>
+              <span>web-dev-examples/to-do-app</span>
+            </a>
+          </p>
+        </blockquote>
+      </aside>
+    </main>
+
+
+    <footer>
+      <div class="copyright__container">
+        <span id="copyright__symbol">&copy;</span>
+
+        <span id="copyright__text">
+          S0AndS0
+          --
+          <a href="https://github.com/web-dev-examples/to-do-app/blob/gh-pages/LICENSE">
+            AGPL-3.0
+          </a>
+          --
+        </span>
+
+        <span id="copyright__date">2021</span>
+      </div>
+    </footer>
+
+
+    <template id="template__todo_list__container">
+      <li class="todo_list__container__item">
+        <details>
+          <summary class="todo_list__summary" id="template__summary"></summary>
+
+          <div class="todo_list__inputs__container">
+            <div class="todo_list__inputs">
+              <input class="todo_list__input" type="text" required />
+
+              <label id="template__label__name"
+                     class="todo_list__label"
+              >Name</label>
+            </div>
+
+            <div class="todo_list__inputs">
+              <textarea class="todo_list__textarea"
+                        name=""
+                        cols="80"
+                        rows="5"
+                        required
+              ></textarea>
+
+              <label id="template__label__description"
+                     class="todo_list__label"
+              >Description</label>
+            </div>
+
+            <div class="todo_list__inputs">
+              <button id="template__button__delete"
+                      class="todo_list__button"
+              >Delete List</button>
+
+              <button id="template__button__add"
+                      class="todo_list__button"
+              >Add Item</button>
+            </div>
+          </div>
+
+          <ul class="todo_list"></ul>
+        </details>
+      </li>
+    </template>
+
+
+    <template id="template__todo_list__item">
+      <li class="todo_list__item">
+        <input type="checkbox" class="todo_list__item__checkbox" />
+        <div class="todo_list__item__container">
+          <details class="todo_list__item__details">
+            <summary class="todo_list__item__summary">
+            </summary>
+          </details>
+
+          <h3 class="todo_list__item__summary"></h3>
+
+          <div class="todo_list__item__inputs">
+            <button class="todo_list__item__button__delete">Delete</button>
+            <label class="todo_list__item__label">Finished</label>
+          </div>
+        </div>
+      </li>
+    </template>
+  </body>
+</html>

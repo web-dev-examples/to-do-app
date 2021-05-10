@@ -1,0 +1,27 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outFile": "assets/js/main.js",
+    "module": "AMD",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "es2017"
+    ],
+    "sourceMap": true,
+    "removeComments": true,
+    "experimentalDecorators": true
+  },
+  "include": [
+    "@types/to-do-app.d.ts",
+    "ts/assets/js/modules/**/*.ts",
+    "ts/assets/js/lib/**/*.ts",
+    "ts/assets/js/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "ts/__tests__",
+    "ts/assets/**/__tests__/*.ts"
+  ]
+}
+

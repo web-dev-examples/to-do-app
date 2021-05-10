@@ -1,0 +1,38 @@
+{
+  "name": "To-Do List Application",
+  "short_name": "ToDo",
+  "description": "Static web-app with persistence",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#fff",
+  "icons": [
+    {
+      "src": "assets/images/app/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/app/icons/android-chrome-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/app/icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/app/icons/mstile-150x150.png",
+      "sizes": "150x150",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/app/icons/safari-pinned-tab.svg",
+      "type": "image/svg"
+    }
+  ],
+  "categories": [
+    "organization",
+    "tasks"
+  ]
+}
