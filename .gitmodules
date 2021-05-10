@@ -1,0 +1,4 @@
+[submodule "universally-unique-identifier"]
+	path = ts/assets/modules/universally-unique-identifier
+	url = https://github.com/javascript-utilities/universally-unique-identifier.git
+	branch = main
